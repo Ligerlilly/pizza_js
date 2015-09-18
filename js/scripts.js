@@ -30,6 +30,6 @@ function Pizza() {
 }
 
 function Topping(name, cost) {
-  var toppingName = name;
-  var toppingCost = cost;
+  this.name = name;
+  this.cost = cost;
 }
