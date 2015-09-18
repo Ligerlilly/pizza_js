@@ -16,6 +16,14 @@ describe('Pizza', function() {
     p.addTopping(m);
     expect(p.pieCost()).to.eq(7);
   });
+
+  it('multiplies cost by number of pizzas', function() {
+    var p = new Pizza();
+    p.size('small');
+    p.quantity(3);
+    expect(p.pieCost()).to.eq(15);
+  });
+
 });
 
 describe('Topping', function() {

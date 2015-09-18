@@ -1,5 +1,5 @@
 function Pizza() {
-  var cost, pieSize, addTopping, pieCost;
+  var cost, pieSize, addTopping, pieCost, pieQuantity;
   cost = 0;
   pieSize = function(size) {
     if (size === 'small') {
@@ -16,6 +16,10 @@ function Pizza() {
     }
   };
 
+  pieQuantity = function(num) {
+    cost *= num;
+  };
+
   pieCost = function() {
     return cost;
   };
@@ -26,7 +30,8 @@ function Pizza() {
 
   return { size       : pieSize,
            addTopping : addTopping,
-           pieCost    : pieCost };
+           pieCost    : pieCost,
+           quantity   : pieQuantity };
 }
 
 function Topping(name, cost) {
