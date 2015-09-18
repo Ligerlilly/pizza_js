@@ -1,15 +1,35 @@
 function Pizza() {
-  var cost = 0;
-  var pieSize = function(size) {
+  var cost, pieSize, addTopping, pieCost;
+  cost = 0;
+  pieSize = function(size) {
     if (size === 'small') {
-      return cost = 5;
+      cost = 5;
+      //return cost;
     }
     else if (size === 'medium'){
-      return cost = 10;
+      cost = 10;
+      //return cost;
     }
     else if (size === 'large') {
-      return cost = 15;
+      cost = 15;
+      //return cost;
     }
   };
-  return { size : pieSize };
+
+  pieCost = function() {
+    return cost;
+  };
+
+  addTopping = function(topping) {
+    cost += topping.cost;
+  };
+
+  return { size       : pieSize,
+           addTopping : addTopping,
+           pieCost    : pieCost };
+}
+
+function Topping(name, cost) {
+  var toppingName = name;
+  var toppingCost = cost;
 }
