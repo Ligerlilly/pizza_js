@@ -17,3 +17,11 @@ describe('Pizza', function() {
     expect(p.pieCost()).to.eq(7);
   });
 });
+
+describe('Topping', function() {
+  it("returns topping name and cost", function() {
+    var m = new Topping('mushroom', 2);
+    expect(m.cost).to.eq(2);
+    expect(m.name).to.eq('mushroom');
+  });
+});
